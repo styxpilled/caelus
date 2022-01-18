@@ -5,9 +5,11 @@
 <script>
 	import { onMount } from 'svelte';
 	import { createScene } from '$lib/scene';
-	let el;
+	import { createScene2 } from '$lib/scene2';
+	let el, el2;
 	onMount(() => {
 		createScene(el);
+		createScene2(el2);
 	});
 </script>
 
@@ -23,6 +25,23 @@
 		</p>
 	</div>
 </section>
+<section class="frame">
+	<div id="editor">
+		<h1>this is why I like joe rogan he is good at thinking</h1>
+		<p>
+			Have you watched the lord of the rings,man? Yeah? If you remember there’s this little dude,
+			Gollum, he’s a fuckin’ genius man. Eats nothing but raw meat, fish; dudes got his paleo diet
+			down to an art, man. Bear-crawls everywhere, rock-climbing, dude’s athletic as fuck. He should
+			not look as scrawny as he does, he should be one scary looking motherfucker, all muscle. No
+			offense to Tolkien but he doesn’t know shit about fitness. I’ve started eating live fish and
+			bear crawling everywhere, and I gotta tell ya I feel incredible, best shape I’ve ever been in.
+			I’m telling you, man, Gollum’s like a Hobbit chimpanzee.
+		</p>
+	</div>
+	<div id="result">
+		<canvas bind:this={el2} />
+	</div>
+</section>
 
 <style lang="scss">
 	.frame {
@@ -32,8 +51,9 @@
 		width: 60rem;
 		height: 30rem;
 	}
-	// canvas {
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
+	canvas {
+		// background-color: aqua;
+		width: 30rem;
+		height: 30rem;
+	}
 </style>
